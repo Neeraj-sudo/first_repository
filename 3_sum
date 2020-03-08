@@ -1,0 +1,35 @@
+int Solution::threeSumClosest(vector<int> &A, int B) 
+{
+    sort(A.begin(),A.end());
+    int sum, result =0;
+    int min_diff = INT_MAX;
+    for(int i=0;i<A.size()-2;++i)
+    {
+        int l=i+1, r = A.size()-1;
+        while(l<r)
+        {
+            sum = A[i]+A[l]+A[r];
+            int differ = abs(sum - B);
+            
+            if (differ < min_diff) 
+            {
+                min_diff = differ;
+                result = sum;
+            }
+            
+            if(B==sum)
+            return sum;
+          
+            if (sum > B) 
+            { 
+                r--; 
+            } 
+  
+            else 
+            { 
+                l++; 
+            } 
+        }
+    }
+    return result;
+}

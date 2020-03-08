@@ -1,0 +1,11 @@
+Solutions of coding questions
+1) 3 sum - 3_sum.txt
+2) redundant braces - redundant_braces.txt
+
+A script in any language to download and install all the given dependencies.
+I have parsed the given dependencies a text file as requirement_file1.txt and 
+install_script.sh contains the shell script to install all the packages.
+I have used pip virtualene and installed all the packages in virtual environment.
+
+
+Thankyou.

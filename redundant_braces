@@ -1,0 +1,19 @@
+int Solution::braces(string A) 
+{
+    int braces=0, oper = 0;
+    for(int i=0;i<A.size();++i)
+    {
+        if(A[i]=='(' && A[i+2]==')')
+        return 1;
+        
+        if(A[i]=='(')
+        braces++;
+        
+        if(A[i]=='+' || A[i]=='-' || A[i]=='/' ||A[i]=='*')
+           oper++;
+    }
+    if(braces>oper)
+    return 1;
+    else 
+    return 0;
+}
